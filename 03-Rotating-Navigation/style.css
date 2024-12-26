@@ -21,11 +21,12 @@ body {
   min-height: 100%;
   padding: 32px;
   background-color: white;
-  transition: all ease .4s;
+  transition:  linear .6s;
+  transform-origin: top  left ;
+
 }
 .container.open-nav{
   transform: rotate(-20deg);
-  transform-origin: top left;
 }
 .circle {
   width: 200px;
