@@ -1,0 +1,10 @@
+.testimonialPanel{
+    transform: translateX(400%);
+    transition: all ease .3s;
+}
+.testimonialPanel:nth-of-type(2n){
+transform: translateX(-400%);
+}
+.testimonialPanel.show{
+    transform: translate(0);
+}
