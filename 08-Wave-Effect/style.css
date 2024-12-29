@@ -10,5 +10,86 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Inter", serif,sans-serif;
+  font-family: "Inter", serif, sans-serif;
+}
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #f8d7a7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 80%;
+  max-width: 384px;
+  background-color: #ffffffc9;
+  height: 45%;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  border-radius: 20px;
+}
+
+.form-control {
+  position: relative;
+}
+.form-control input {
+  display: block;
+  width: 100%;
+  padding: 6px 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #f8d7a7;
+  font-size: 15px;
+  font-family: "Inter", serif;
+}
+
+.form-control input:valid,
+.form-control input:focus {
+  outline: none;
+  color: #302b24;
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+  color: rgba(131, 73, 73, 0.349);
+  transform: translateY(-20px);
+  
+}
+.form-control label {
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+.form-control label span{
+  display: inline-block;
+  font-size: 16px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(.68 ,-0.55 ,.265, 1.55);
+}
+
+form button {
+  width: 60%;
+  padding: 10px;
+  font-family: "Inter", serif;
+  font-size: 16px;
+  background: #f8d7a7;
+  border: none;
+  cursor: pointer;
+}
+form button:active {
+  scale: 0.98;
+}
+
+.message {
+  font-size: 14px;
+}
+.message > a {
+  text-decoration: none;
+  color: #b49668;
 }
