@@ -51,9 +51,9 @@ header h1 {
 }
 .testimonialPanel {
   /* max-height: 500px; */
-  flex-shrink: 1;
+  /* flex-shrink: 1; */
 
-  flex: 0.5;
+  flex: 0.1;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -164,5 +164,10 @@ img {
 @media (max-width:900px) {
   .testimonialsContainer{
     width: 90%;
+  }
+}
+@media (max-width:600px) {
+  .testimonialsContainer{
+    width: 100%;
   }
 }

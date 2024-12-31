@@ -17,6 +17,7 @@ body {
   width: 100%;
   min-height: 100%;
   color: white;
+  overflow: hidden;
 }
 
 .landing {
@@ -35,7 +36,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 50px;
+  z-index: 1;
 }
 .nav .icons {
   display: flex;
@@ -47,9 +49,10 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 93vh;
 }
 .side-panel .image {
-  width: 90%;
+  width: 70%;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -61,12 +64,14 @@ body {
 }
 .side-panel .text {
   /* background-color: pink; */
-  height: 40%;
+  min-height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   /* align-items: center; */
   z-index: 2;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .side-panel .text-info {
   font-size: 16px;
