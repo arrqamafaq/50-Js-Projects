@@ -10,5 +10,81 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Inter", serif,sans-serif;
+  font-family: "Poppins", serif, sans-serif;
+}
+main {
+  height: 100%;
+  width: 100%;
+  background: url(dad_4x);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f6f6;
+}
+.jokes-container {
+  height: 75%;
+  min-height: 500px;
+  width: 90%;
+  max-width: 856px;
+  background: transparent;
+  /* border: 1px solid black; */
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(8, 112, 184, 0.7);
+  padding: 62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  text-align: center;
+}
+h3 {
+  font-size: 20px;
+  letter-spacing: 0.5em;
+  color: rgb(71, 71, 71);
+}
+.joke {
+  flex: 1;
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+#prm-btn {
+  padding: 1rem 2rem;
+  font-size: 20px;
+  border: none;
+  background-color: #a068e0da;
+  font-family: "poppins", sans-serif;
+  color: white;
+  font-weight: 500;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#prm-btn:hover {
+  background-color: #a068e0;
+}
+#prm-btn:active {
+  scale: 0.98;
+}
+@media (max-width: 850px) {
+  .joke {
+    font-size: 28px;
+  }
+}
+@media (max-width: 600px) {
+  .joke {
+    font-size: 24px;
+  }
+  .jokes-container {
+    height:65%;
+  }
 }
