@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   //ui
-  let totalSteps = 10;
+  let totalSteps = 5;
   const stepsContainer = document.querySelector(".steps");
 
   //append step to container
