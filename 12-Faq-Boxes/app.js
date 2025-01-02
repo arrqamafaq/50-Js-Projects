@@ -36,6 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
       questionsContainer.scrollTop = 0;
     }
   });
+
+  //handle accordion
+  questionsContainer.addEventListener('click',(e)=>{
+    const clickElement = e.target;
+    if(clickElement.classList.contains("question") || clickElement.classList.contains("faq-toggle")){
+      const questionItem = clickElement.parentNode;
+      questionItem.classList.toggle("active");
+    }
+  })
+
   //function to remove activeState of catagories
   function resetCatagories() {
     const catagories = document.querySelectorAll(".category.active");
@@ -76,6 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const questionItem = document.createElement("div");
       questionItem.classList.add("questionItem");
 
+      //toggle button
+      const faqToggle = document.createElement("button");
+      faqToggle.classList.add("faq-toggle");
+      faqToggle.innerHTML = `
+      <i class="fa-regular fa-plus"></i>
+      <i class="fa-regular fa-x"></i>
+      `;
       //question
       const question = document.createElement("h3");
       question.classList.add("question");
@@ -86,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
       answer.classList.add("answer");
       answer.textContent = item.answer;
 
-      questionItem.append(question, answer);
+      questionItem.append(question, answer, faqToggle);
       questionsContainer.appendChild(questionItem);
 
       console.log(questionItem);

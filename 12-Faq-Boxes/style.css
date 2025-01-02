@@ -96,6 +96,8 @@ section.faqs-container {
   gap: 10px;
   padding: 16px 32px;
   overflow: hidden;
+  transition: all 0.6s ease;
+
   /* justify-content: space-between; */
 }
 .faqs-catagory {
@@ -114,6 +116,7 @@ section.faqs-container {
   color: #eee;
   cursor: pointer;
   text-transform: capitalize;
+  transition: all 0.6s ease;
 
   &:hover {
     color: orangered;
@@ -123,7 +126,7 @@ section.faqs-container {
 .category.active {
   color: orangered;
 }
-.category.active::before{
+.category.active::before {
   content: "-";
   font-weight: 800;
   margin-right: 5px;
@@ -133,6 +136,7 @@ section.faqs-container {
   /* background-color: orange; */
   width: 85%;
   overflow-y: auto;
+  transition: all 0.6s ease;
 }
 .faqs-questions::-webkit-scrollbar {
   background: transparent;
@@ -158,13 +162,69 @@ section.faqs-container {
 .faqs-questions .questionItem {
   border-top: 1px solid #eeeeee52;
   padding: 18px 0;
+  padding-right: 30px;
+  position: relative;
+  transition: all 0.6s ease;
 }
 .questionItem .question {
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 20px;
+  cursor: pointer;
 }
 .questionItem .answer {
   font-size: 15px;
+  padding-right: 30px;
   color: #eeeeeeab;
+  display: none;
+  margin-top: 20px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+.questionItem.active .answer {
+  font-size: 15px;
+  color: #eeeeeeab;
+  display: block;
+  margin-top: 20px;
+  height: fit-content;
+}
+.questionItem .faq-toggle {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  font-size: 12px;
+  color: white;
+  background: transparent;
+  /* padding: 15px; */
+  width: 24px;
+  height: 24px;
+  /* padding: 4px; */
+  border-radius: 50%;
+  border: 2px solid #eeeeeeb4;
+  cursor: pointer;
+  &:hover {
+    color: black;
+    background-color: #eee;
+  }
+}
+.faq-toggle i{
+  pointer-events: none;
+}
+.faq-toggle .fa-x {
+  display: none;
+}
+.questionItem.active .faq-toggle {
+  background-color: #eee;
+  color: black;
+  &:hover {
+    color: white;
+    background-color: transparent;
+  }
+}
+.questionItem.active .faq-toggle .fa-x {
+  display: block;
+  font-size: 10px;
+}
+.questionItem.active .faq-toggle .fa-plus {
+  display: none;
 }
