@@ -115,9 +115,26 @@ Each project demonstrates a unique concept or feature, with a live preview link 
 
 **Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/10-Dad-Jokes/
 
+---
+### 11. Display Key Codes
+**Description:** Diplays the key, its keyCode and code when key is pressed.
+
+**Screenshot:**
+![Screenshot from 2025-01-03 01-06-38](https://github.com/user-attachments/assets/b2dbdf81-2d96-487a-97e4-cb1ec1b01542)
+
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/11-Display-Key-Code/
 
 ---
+### 12. FAQ Accordion page
+**Description:** An interactive FAQ accordion that renders questions and answers dynamically from JavaScript objects rather than static HTML.
 
+**Screenshot:**
+![Screenshot from 2025-01-03 01-17-36](https://github.com/user-attachments/assets/9ffe61a8-2080-4764-b502-94d1695cfcd3)
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/12-Faq-Boxes/
 
 ---
 
