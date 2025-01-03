@@ -137,6 +137,17 @@ Each project demonstrates a unique concept or feature, with a live preview link 
 **Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/12-Faq-Boxes/
 
 ---
+### 13. Help Me Pick
+**Description:** An interactive decision-making tool that randomly selects an option from user-provided inputs. Features include dynamic option creation, a visual selection effect.
+
+**Screenshot:**
+![Screenshot from 2025-01-04 00-26-07](https://github.com/user-attachments/assets/bf8e8438-ba94-4221-94d9-a07dd280e686)
+
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/13-Help-Me-Pick/
+
+---
 
 ## How to Run
 1. Clone the repository.
