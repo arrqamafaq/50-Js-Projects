@@ -2,6 +2,14 @@ window.addEventListener("DOMContentLoaded", () => {
   //Available Goals in liters
   const waterGoal = [1, 1.5, 2, 2.5, 3, 3.5];
 
+  //check if it's a new date to reset storage
+  const today = new Date().toDateString();
+  const lastSavedData = localStorage.getItem("lastDate");
+
+  if (lastSavedData !== today) {
+    resetLocalStorage();
+  }
+
   //user data to be saved in local storage\
   let userData = loadData() || {
     goalSet: "2",
@@ -99,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const goalPercentageFilled =
       ((userData.addedCups.length * 250) / (+userData.goalSet * 1000)) * 100;
-      if(goalPercentageFilled === 0) return;
+    if (goalPercentageFilled === 0) return;
     goalCompletedElement.innerText =
       Number(goalPercentageFilled.toFixed(1)) + "%";
     goalCompletedElement.style.height =
@@ -203,6 +211,8 @@ window.addEventListener("DOMContentLoaded", () => {
   //function to save userdata to local storage
   function saveData() {
     localStorage.setItem("userData", JSON.stringify(userData));
+    const today = new Date().toDateString(); //save todays Date
+    localStorage.setItem("lastDate", today);
   }
 
   //function to loadData from local storage
@@ -212,6 +222,12 @@ window.addEventListener("DOMContentLoaded", () => {
       const userData = JSON.parse(savedData);
       return userData;
     }
+  }
+
+  //function to reset localStorage the nextDay after creation
+  function resetLocalStorage() {
+    localStorage.removeItem("userData");
+    console.log("Data reset for new Day");
   }
 });
 
