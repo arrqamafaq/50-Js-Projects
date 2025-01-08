@@ -1,3 +1,7 @@
+:root {
+  --background: royalblue;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -10,5 +14,179 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Inter", serif,sans-serif;
+  font-family: "poppins", serif, sans-serif;
 }
+main {
+  min-height: 100%;
+  width: 100%;
+  background: linear-gradient(145deg, #0066cc 0%, #0044aa 100%);
+  color: white;
+  padding: 12px;
+}
+header {
+  /* background-color: brown; */
+}
+header h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.set-goal-container {
+  /* background-color: pink; */
+  text-align: center;
+  margin: 10px 0;
+  padding: 12px;
+}
+.set-goal-container h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.set-goal-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  /* width: 80%; */
+  flex-wrap: wrap;
+}
+.set-goal-container button {
+  /* padding: 10px 16px; */
+  min-width: 100px;
+  min-height: 40px;
+  flex-wrap: wrap;
+  font-size: 15px;
+  font-family: "Poppins", serif;
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.set-goal-container button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3);
+}
+.set-goal-container button.active,
+.set-goal-container button:focus {
+  background: #00ccff;
+  border-color: #00ccff;
+  color: white;
+  scale: 1.09;
+  outline: none;
+}
+
+.goal-container {
+  /* background-color: red; */
+  height: 40vh;
+  max-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.goal-container h3 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.cup {
+  height: 80%;
+  width: 240px;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 0 0 35px 35px;
+  /* color: royalblue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+}
+.cup .goal-remained {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* flex: 1; */
+  height: 100%;
+  transition: 0.3s ease;
+  /* background-color: red; */
+}
+.cup .goal-remained span {
+  /* background-color: pink; */
+  font-size: 2rem;
+  line-height: 1;
+}
+.cup .goal-remained small {
+  font-size: .5rem;
+}
+.cup .goal-completed-percentage {
+  font-size: 2rem;
+  background: linear-gradient(180deg, #00ccff 0%, #0099ff 100%);
+  box-shadow: 0 4px 15px rgba(0, 204, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  height: 0%;
+  width: 100%;
+}
+
+.fill-goal-container {
+  /* background-color: green; */
+  margin: 10px auto;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 755px;
+}
+.fill-goal-container p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.fill-goal-cups-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* background-color: yellow; */
+  padding: 10px;
+}
+.cup.small-cup {
+  width: 50px;
+  aspect-ratio: 8/10;
+  border-radius: 0 0 15px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cup.small-cup.filled {
+  background: linear-gradient(180deg, #00ccff 0%, #0099ff 100%);
+  box-shadow: 0 4px 15px rgba(0, 204, 255, 0.3);
+  pointer-events: none;
+}
+
+/* Animations
+@keyframes waterRise {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.water-fill {
+  animation: waterRise 0.8s ease-out;
+} */
