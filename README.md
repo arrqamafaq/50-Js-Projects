@@ -146,8 +146,24 @@ Each project demonstrates a unique concept or feature, with a live preview link 
 
 
 **Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/13-Help-Me-Pick/
-
 ---
+### 15. HydroTrack - Dynamic Water Tracker App
+**Description:** HydroTrack is an interactive and dynamic water tracker that helps users stay on top of their daily hydration goals. 🌟
+
+Set Your Goal: Choose a personalized water intake target.
+Track Progress: Visual representation of your progress with big and small cups that update dynamically as you log water.
+Persistent Data: User data is stored locally, ensuring progress and preferences remain intact.
+Daily Reset: Automatically resets every day to keep you motivated.
+
+**Screenshot:**
+<br/>
+![image](https://github.com/user-attachments/assets/9b68006a-0151-4216-8cb7-6eaff8c6f990)
+
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/15-
+---
+
 
 ## How to Run
 1. Clone the repository.
