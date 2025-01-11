@@ -120,7 +120,7 @@ clear.addEventListener("click", () => {
   const canvasWidth = rect.width;
   const canvasHeight = rect.height;
   ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-  saveCanvas();
+  localStorage.removeItem(canvasKey);
 });
 colorElement.addEventListener("change", (e) => {
   color = e.target.value;
