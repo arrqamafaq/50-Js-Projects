@@ -52,6 +52,7 @@ canvas.addEventListener("mouseup", () => {
   isPressed = false;
   x = undefined;
   y = undefined;
+  saveCanvas();
 });
 canvas.addEventListener("mousemove", (e) => {
   if (isPressed) {
@@ -62,10 +63,43 @@ canvas.addEventListener("mousemove", (e) => {
     drawLine(x, y, x2, y2, size);
     x = x2;
     y = y2;
-    saveCanvas();
   }
 });
+canvas.addEventListener(
+  "touchstart",
+  (e) => {
+    e.preventDefault();
+    isPressed = true;
+    x = e.touches[0].clientX;
+    y = e.touches[0].clientY;
+  },
+  { passive: false }
+);
+canvas.addEventListener(
+  "touchend",
+  () => {
+    isPressed = false;
+    x = undefined;
+    y = undefined;
+  },
+  { passive: false }
+);
+canvas.addEventListener(
+  "touchmove",
+  (e) => {
+    if (isPressed) {
+      const x2 = e.touches[0].clientX;
+      const y2 = e.touches[0].clientY;
 
+      drawCircle(x2, y2, size);
+      drawLine(x, y, x2, y2, size);
+      x = x2;
+      y = y2;
+      saveCanvas();
+    }
+  },
+  { passive: false }
+);
 decrease.addEventListener("click", () => {
   if (size > 4) {
     size -= 1;
