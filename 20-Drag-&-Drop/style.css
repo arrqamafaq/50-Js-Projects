@@ -10,5 +10,38 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Inter", serif,sans-serif;
+  font-family: "Inter", serif, sans-serif;
+}
+main {
+  height: 100%;
+  padding: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: black;
+}
+.empty {
+  /* flex-shrink:0; */
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  border:2px solid white;
+}
+.fill {
+  background-image: url("https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.hold{
+  border:8px solid grey
+}
+.empty.hovered{
+background-color: rgb(172, 170, 170);
+border: 1.8px dotted black;
 }
