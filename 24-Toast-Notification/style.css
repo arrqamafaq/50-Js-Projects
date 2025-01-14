@@ -10,5 +10,45 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Inter", serif,sans-serif;
+  font-family: "Inter", serif, sans-serif;
+}
+main {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(145deg, #1a1b1f 0%, #22242a 50%, #1a1b1f 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+button#add-notification {
+  font-size: 20px;
+  padding: 8px 16px;
+}
+
+.toasts {
+  /* color: white; */
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.toast {
+  max-width: 240px;
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 16px;
+  transition: all ease.3s;
+  animation: anime 0.6s ease;
+}
+@keyframes anime {
+  from {
+    transform: translateX(110%);
+    opacity: 0;
+  }
 }
