@@ -37,7 +37,7 @@ button#add-notification {
   gap: 20px;
 }
 .toast {
-  max-width: 240px;
+  max-width: 180px;
   background-color: aliceblue;
   color: black;
   text-align: center;
