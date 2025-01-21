@@ -12,3 +12,31 @@ body {
 body {
   font-family: "Inter", serif,sans-serif;
 }
+main{
+  height: 100%;
+  width: 100%;
+  background-color: darksalmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.speed{
+position: absolute;
+bottom:20px;
+background-color: rgba(230, 91, 91, 0.158);
+padding: 10px 20px;
+color: white;
+font-weight: 800;
+font-size: 18px;
+}
+#speed{
+  background: darksalmon;
+  font-size: 16px;
+  padding: 5px 2px;
+  text-align: center;
+  border: none;
+  color: white;
+  &:focus{
+    outline: none;
+  }
+}
