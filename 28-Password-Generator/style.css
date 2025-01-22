@@ -18,9 +18,11 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.932);
+  color: white;
 }
 .app-container{
-  background-color: rgba(0, 0, 0, 0.137);
+  background-color: rgba(104, 101, 101, 0.726);
   box-shadow: 0 60px 80px rgba(0,0,0,0.60), 0 45px 26px rgba(0,0,0,0.14);
   max-width:450px ;
   width: 80%;
@@ -34,7 +36,7 @@ main{
   gap:20px;
 }
 .result-container{
-background-color: rgba(75, 74, 74, 0.253);
+background-color: rgba(43, 42, 42, 0.808);
 height: 40px;
 width: 100%;
 position: relative;
@@ -42,6 +44,7 @@ margin-top: 15px;
 }
 .result-container .copy-btn{
   width: 40px;
+  color: white;
   height: 40px;
   font-size: 18px;
   position: absolute;
