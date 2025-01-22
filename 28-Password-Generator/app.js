@@ -3,7 +3,8 @@ const upperElem=document.querySelector("#uppercase");
 const lowerElem=document.querySelector("#lowercase");
 const symbolElem=document.querySelector("#symbol");
 const numberElem=document.querySelector("#number");
-
+const resultElement= document.querySelector(".result");
+const copyElem=document.querySelector(".copy-btn")
 
 //pass length
 const passwordLengthElement = document.getElementById("length");
@@ -21,6 +22,19 @@ const randomFunction={
     number:()=>getNumber()
 }
 
+//save to clipboard
+copyElem.addEventListener('click',async ()=>{
+    const password = resultElement.innerText;
+    if (!password) return;
+  
+    try {
+      await navigator.clipboard.writeText(password);
+      alert("Password copied to clipboard");
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+      alert("Failed to copy password to clipboard");
+    }
+})
 
 //generate Password
 generateBtn.addEventListener("click",()=>{
@@ -48,7 +62,6 @@ generateBtn.addEventListener("click",()=>{
   }
 
   //display the result
-  const resultElement= document.querySelector(".result");
   resultElement.innerText=result;
   console.log(result);
     
