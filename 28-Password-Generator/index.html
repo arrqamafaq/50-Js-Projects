@@ -20,8 +20,40 @@
     />
   </head>
   <body>
-
-    
+    <main>
+      <div class="app-container">
+        <h1>Password Generator</h1>
+        <div class="result-container">
+          <span class="result"></span>
+          <button class="copy-btn">
+            <i class="fa-solid fa-clipboard"></i>
+          </button>
+        </div>
+        <div class="password-setting">
+          <label >Password Length</label>
+          <input type="number"  id="length" checked step="1" value="8">
+        </div>
+        <div class="password-setting">
+          <label > Include Uppercase Letters</label>
+          <input type="checkbox"  id="uppercase" checked>
+        </div>
+        <div class="password-setting">
+          <label >Include Lowercase Letters</label>
+          <input type="checkbox"  id="lowercase" checked>
+        </div>
+        <div class="password-setting">
+          <label >Include Numbers</label>
+          <input type="checkbox"  id="numbers" checked>
+        </div>
+        <div class="password-setting">
+          <label >Include Symbols</label>
+          <input type="checkbox"  id="symbols" checked>
+        </div>
+        <button class="generate-btn">
+          Generate Password
+        </button>
+      </div>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
