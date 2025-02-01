@@ -33,27 +33,6 @@ addNoteHeadingBtn.addEventListener("click",()=>{
   noteHeadingInput.value="";
 })
 
-
-
-
-
-// //eventlistners for editing and removing notes if available
-
-// if(addedNotes.length > 0){
-//     console.log(noteDeleteBtn);
-//     console.log(noteEditBtn);
-
-//     noteDeleteBtn.addEventListener("click",(e)=>{
-//         console.log(e.target);
-//     })
-//     noteEditBtn.addEventListener("click",()=>{
-//         console.log(e.target);
-//     })
-
-// }
-
-
-
 //function to render notes
 
 function renderNotes(){
@@ -62,12 +41,6 @@ addedNotes.forEach((note) => {
     const newNote= createNote(note);
     notesContainer.appendChild(newNote);
 });
-}
-
-
-//function to open modal when add-note clicked
-function addHeadingToNote(){
-  
 }
 
 //function to create a card
