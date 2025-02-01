@@ -7,19 +7,27 @@ const addNoteHeadingBtn=document.querySelector("#add-note-with-heading-btn");
 const noteHeadingInput=document.querySelector(".add-note-heading-input");
 
 
-let addedNotes =[];
+//array to store notes data or retrieve notes data from local
+let addedNotes = getNotes()||[];
+console.log(addedNotes);
+renderNotes();
 
-
+//open heading
 addNoteBtn.addEventListener("click",()=>{
    addNoteContainer.classList.toggle("active");
-})
+});
 
 console.log(noteHeadingInput);
 
 addNoteHeadingBtn.addEventListener("click",()=>{
   if(noteHeadingInput.value === '') return;
-  const note = createNote(noteHeadingInput.value);
+
+  const note = {};
+  note.id=noteHeadingInput.value;
+  note.text="";
   addedNotes.push(note);
+  console.log(addedNotes);
+  saveNotes(addedNotes);
   renderNotes();
   addNoteContainer.classList.remove("active");
   noteHeadingInput.value="";
@@ -29,28 +37,30 @@ addNoteHeadingBtn.addEventListener("click",()=>{
 
 
 
-//eventlistners for editing and removing notes if available
+// //eventlistners for editing and removing notes if available
 
-if(addedNotes.length > 0){
-    console.log(noteDeleteBtn);
-    console.log(noteEditBtn);
+// if(addedNotes.length > 0){
+//     console.log(noteDeleteBtn);
+//     console.log(noteEditBtn);
 
-    noteDeleteBtn.addEventListener("click",(e)=>{
-        console.log(e.target);
-    })
-    noteEditBtn.addEventListener("click",()=>{
-        console.log(e.target);
-    })
+//     noteDeleteBtn.addEventListener("click",(e)=>{
+//         console.log(e.target);
+//     })
+//     noteEditBtn.addEventListener("click",()=>{
+//         console.log(e.target);
+//     })
 
-}
+// }
 
 
 
 //function to render notes
 
 function renderNotes(){
+  notesContainer.innerHTML=``;
 addedNotes.forEach((note) => {
-    notesContainer.appendChild(note);
+    const newNote= createNote(note);
+    notesContainer.appendChild(newNote);
 });
 }
 
@@ -61,13 +71,13 @@ function addHeadingToNote(){
 }
 
 //function to create a card
-function createNote(heading){
+function createNote(note){
 const cardStack= document.createElement("div");
 cardStack.classList.add("card-stack");
 
 cardStack.innerHTML=`
         <div class="note-card">
-          <h2 class="note-heading">${heading}</h2>
+          <h1 class="note-heading">${note.id}</h1>
           <div class="tools-container">
             <div class="note-tools">
               <button id="edit-note-btn"><i class="fa-regular fa-pen-to-square"></i></button>
@@ -75,10 +85,54 @@ cardStack.innerHTML=`
             </div>
           </div>
           <div class="note-content">
-            <div class="main hidden"></div>
-            <textarea id="edit-note-content-textarea"></textarea>
+            <div class="main hidden">${marked.parse(note.text)}</div>
+            <textarea id="edit-note-content-textarea"  placeholder="type.." >${note.text}</textarea>
           </div>
           </div>
 `
+const editBtn= cardStack.querySelector("#edit-note-btn");
+const deleteBtn= cardStack.querySelector("#delete-note-btn");
+const mainText =  cardStack.querySelector(".main");
+const textArea = cardStack.querySelector("#edit-note-content-textarea");
+
+if(note.text !==''){
+  mainText.classList.remove("hidden");
+  textArea.classList.add("hidden");
+}
+
+editBtn.addEventListener("click",()=>{
+  mainText.classList.toggle("hidden");
+  textArea.classList.toggle("hidden");
+  textArea.focus();
+});
+
+textArea.addEventListener("change",()=>{
+  const content = textArea.value;
+  note.text=content;
+  mainText.innerHTML = marked.parse(note.text);
+  saveNotes(addedNotes);
+})
+
+deleteBtn.addEventListener("click",(e)=>{
+  addedNotes = addedNotes.filter((item)=> item.id !== note.id);
+  console.log(addedNotes);
+  saveNotes(addedNotes);
+  renderNotes();
+})
+
 return cardStack;
 }
+
+
+//function to save data to local storage
+function saveNotes(notes){
+  const addedNotesString= JSON.stringify(notes);
+  localStorage.setItem("notes",addedNotesString);
+}
+
+//function to get saved data
+function getNotes(){
+  const savedNotes = localStorage.getItem("notes")
+  return JSON.parse(savedNotes);
+}
+

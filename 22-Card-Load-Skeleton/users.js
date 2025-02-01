@@ -92,12 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //creating a testimonial card for each user
   users.forEach((user) => {
-    const panel = createTestimonialSkeleton(
-      user.picture,
-      user.username,
-      user.profile,
-      user.testimonial
-    );
+    const panel = createTestimonialSkeleton();
     testimonialsContainer.appendChild(panel);
     setTimeout(() => {
       addDataToTestimonial(
@@ -110,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   });
   //function for creating a testimonial card for each user
-  function createTestimonialSkeleton(picture, username, profile, testimonial) {
+  function createTestimonialSkeleton() {
     const panel = document.createElement("div");
     panel.classList.add("testimonialPanel");
     panel.innerHTML = `

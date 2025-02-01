@@ -111,10 +111,10 @@ section.notes{
 
 .note-card{
   position: relative;
-  width: 350px;
+  width: 400px;
   color: #D0D0D0;
-  /* min-height: 350px; */
-  height: 350px;
+  min-height: 380px;
+  /* height: 350px; */
   background-color:#1C1C1C;
   padding: 32px;
   display: flex;
@@ -122,6 +122,7 @@ section.notes{
   border-radius: 30px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   z-index: 2;
+  word-break: break-all;
 }
 .tools-container{
   display: flex;
@@ -137,7 +138,7 @@ section.notes{
   border: none;
   background: transparent;
   margin-left: 5px;
-  color: #c7c4c4;
+  color: #8a8787;
   font-size: 14px;
   cursor: pointer;
   &:hover{
@@ -148,34 +149,43 @@ section.notes{
   pointer-events: none;
 }
 
+
 .note-content{
   background-color: #2D2D2D;
-  /* height: 100%; */
   flex: 1;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column; 
   border-radius: 25px;
   margin-top: 1rem;
-  overflow: hidden;
+  overflow: hidden; 
 
 }
-textarea{
-  width: 100%;
+.main{
+  flex: 1;
+  padding:1rem 2rem ;
   height: 100%;
+  word-break: break-all;
+}
+textarea{
+  flex: 1;
+  width: 100%;
+  height:100%;
+  padding:1rem 2rem ;
   background: transparent;
   border: none;
   font-size: 14px;
-  color:#c7c4c4 ;
-
+  color:#c7c4c4;
 }
 textarea:focus{
   outline: none;
 }
 
 
+
 .card-stack {
   position: relative;
-  width: 360px; /* Match note-card width */
-  height: 360px; /* Match note-card height */
+  width: 410px; /* Match note-card width */
+  height: 390px; /* Match note-card height */
   margin: 20px;
 }
 
@@ -203,5 +213,9 @@ textarea:focus{
   right: -8px;
   transform: rotate(3deg);
   z-index: 1;
+}
+
+.hidden{
+  display: none;
 }
 
