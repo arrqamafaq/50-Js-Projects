@@ -48,33 +48,35 @@ input{
     outline: none;
   }
 }
-
+.inputCheckbox{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right:1rem;
+  top:1rem;
+}
+input#keep-color{
+cursor: pointer;
+}
 .grid-container{
   max-width: 780px;
   max-height: 780px;
   height: 80vw;
   width: 80vw;
-  /* display: flex;
-  flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(4,1fr);
-
   border: 2px solid #1d1d1d;
-  /* background-color: #1d1d1d; */
+
 }
 
 .box{
-  /* height: 16px;
-  min-width: 16px; */
   background-color: #1d1d1d;
-  border: 1px solid black;
-
-  /* flex-grow: 1;
-  flex-shrink:1; */
+  box-shadow: 0 0 2px #000;
+  /* border: 0.1px solid black; */
   cursor:pointer;
-  transition: ease 1s;
+  transition: 3s ease;
 }
 .box:hover{
-  /* transition-duration: 0; */
+  transition-duration: 0s;
 }

@@ -1,5 +1,7 @@
 const setSize=document.querySelector("input");
 const container=document.querySelector(".grid-container");
+const checkbox=document.querySelector("#keep-color");
+
 
 //default grid
 createGrid(setSize.value);
@@ -15,29 +17,11 @@ setSize.addEventListener("input",()=>{
 })
 
 
-addColor();
-
-//function to add colors on hover
-function addColor(){
-const box=document.querySelectorAll(".box");
-    box.forEach((b)=>{
-        b.addEventListener('mouseenter',()=>{
-            b.style.backgroundColor=getRandomColor();
-        });
-        // b.addEventListener('mouseleave',()=>{
-        //     b.style.backgroundColor="#1d1d1d";
-        // })
-    })
-}
-
-
-
 //function to createGrid
 function createGrid(size){
     container.innerHTML=``;
     //to determine rows and cols
     const gridSize=Math.ceil(Math.sqrt(size));
-     console.log(gridSize);
 
     //creating the grid
     container.style.gridTemplateColumns=`repeat(${size},1fr)`;
@@ -50,10 +34,16 @@ function createGrid(size){
        const box = document.createElement("div");
        box.classList.add("box");
        fragment.appendChild(box);
+       box.addEventListener('mouseover',()=>setColor(box));
+           box.addEventListener('mouseout',()=> {
+            if(!checkbox.checked) {
+                removeColor(box)
+       }});
+       
    }
    
    container.appendChild(fragment); // Append all at once for better performance
-addColor();
+// addColor();
 }
 
 getRandomColor();
@@ -67,6 +57,19 @@ function getRandomColor(){
 
      // Convert each value to a two-digit hexadecimal
      const color = `#${red.toString(16).padStart(2, "0")}${green.toString(16).padStart(2, "0")}${blue.toString(16).padStart(2, "0")}`;
-    console.log(color);
     return color;
+}
+
+//function to setcolor
+function setColor(element){
+    const color = getRandomColor();
+    element.style.background=color;
+    element.style.boxShadow=`0 0 2px ${color},0 0 10px ${color}`;
+
+}
+
+//function remove color
+function removeColor(element){
+    element.style.backgroundColor="#1d1d1d";
+    element.style.boxShadow="0 0 2px #000";
 }
