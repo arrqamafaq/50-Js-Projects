@@ -68,13 +68,13 @@ input{
   /* height: 16px;
   min-width: 16px; */
   background-color: #1d1d1d;
-  margin:1px;
+  border: 1px solid black;
 
   /* flex-grow: 1;
   flex-shrink:1; */
-  cursor:crosshair;
-  transition: ease 2s;
+  cursor:pointer;
+  transition: ease 1s;
 }
 .box:hover{
-  transition-duration: 0;
+  /* transition-duration: 0; */
 }
