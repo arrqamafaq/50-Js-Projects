@@ -10,5 +10,71 @@ body {
   width: 100%;
 }
 body {
-  font-family: "Inter", serif,sans-serif;
+  font-family: "Poppins", serif,sans-serif;
+}
+main{
+  background-color: #111;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:40px;
+}
+.input{
+  position: absolute;
+  left:1rem;
+  top:1rem;
+}
+label{
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+input{
+  width: 68px;
+  height: 40px;
+  padding-left: 8px;
+  font-size: 18px;
+  border: none;
+  background-color: #a5a1a1;
+  color: white;
+  font-weight: 600;
+  margin: 8px;
+  border-radius:12px ;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.grid-container{
+  max-width: 780px;
+  max-height: 780px;
+  height: 80vw;
+  width: 80vw;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,1fr);
+
+  border: 2px solid #1d1d1d;
+  /* background-color: #1d1d1d; */
+}
+
+.box{
+  /* height: 16px;
+  min-width: 16px; */
+  background-color: #1d1d1d;
+  margin:1px;
+
+  /* flex-grow: 1;
+  flex-shrink:1; */
+  cursor:crosshair;
+  transition: ease 2s;
+}
+.box:hover{
+  transition-duration: 0;
 }
