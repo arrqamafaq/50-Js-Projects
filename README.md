@@ -164,6 +164,222 @@ Daily Reset: Automatically resets every day to keep you motivated.
 **Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/15-
 ---
 
+### 17. Background Image Slider
+**Description:** A simple and dynamic background image slider that allows users to navigate through a collection of stunning images using left and right arrows.
+
+Seamless Navigation: Users can switch between images using navigation buttons.
+Preloaded Images: The next and previous images are preloaded to ensure a smooth transition.
+Auto Reset: If the user reaches the last image, it loops back to the first and vice versa.
+Minimal UI: A clean and distraction-free experience.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-10-33](https://github.com/user-attachments/assets/0741fa0a-6f69-45cc-8bba-c453cad2b567)
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/17-Background-Image-Slider
+---
+
+### 18. Clock
+**Description:** A stylish clock that features both an analog and digital display with smooth animations. 🕰️
+
+Live Time Update: The clock updates every second to display the correct time.
+Analog & Digital View: Features a traditional clock with rotating hands and a digital time display.
+Dark/Light Mode Toggle: Users can switch between dark and light modes for a personalized experience.
+Smooth Transitions: The clock hands move dynamically with real-time updates.
+Date Display: Shows the current day and month alongside the clock.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-11-17](https://github.com/user-attachments/assets/44418f3f-6d8b-46f9-b6bc-4253906295f0)
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/18-Clock
+---
+
+### 20. Drag & Drop
+**Description:** A simple and interactive drag-and-drop game where users can move draggable elements into empty slots. Ensures only one item per slot, enhancing user experience. 🎮
+
+Dynamic Element Creation: Empty slots and draggable elements are generated dynamically.
+Smooth Drag & Drop: Utilizes the HTML5 Drag & Drop API for seamless interaction.
+Visual Feedback: Elements change appearance during drag events for better UX.
+Prevents Overlapping: Ensures that each empty slot contains only one draggable element.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-12-06](https://github.com/user-attachments/assets/08fb2361-a78d-429c-9d74-7eb0517bfe59)
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/20-Drag-&-Drop
+---
+
+### 21. Drawing Pad
+**Description:** A responsive and feature-rich drawing pad that allows users to sketch with adjustable brush sizes and colors. 🎨
+
+High-Resolution Canvas: Adapts to device resolution to prevent blurry drawings.
+Adjustable Brush: Users can change brush size and color dynamically.
+Persistent Drawings: Saves artwork in local storage, even after page refresh.
+Clear Canvas: Allows users to reset the canvas with a single click.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-13-38](https://github.com/user-attachments/assets/807aafed-c6c8-47d8-94a2-7d7b1fdf3de1)
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/21-Drawing-Pad
+---
+
+### 22. Card Load Skeleton
+**Description:** A smooth loading animation effect for testimonial cards before real content appears. 🚀
+
+Skeleton Loading Effect: Displays a placeholder animation before loading actual data.
+Dynamic Content Loading: Simulates API-like behavior with a 2-second delay.
+Seamless Transition: Automatically replaces skeleton elements with real user testimonials.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-13-55](https://github.com/user-attachments/assets/1c845089-e36a-4e45-9a91-813638727b09)
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/22-Card-Load-Skeleton
+---
+
+### 23. Vertical Slider
+**Description:** A smooth vertical image and text slider. 🎡
+
+Two-Sided Sliding: Left side displays text info, right side shows images.
+Dynamic Slide Generation: Uses JavaScript to populate slides from a dataset.
+Smooth Transitions: Clicking the up/down buttons moves the slides smoothly.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-14-26](https://github.com/user-attachments/assets/3504c963-7b09-47c7-a1a1-f2a80cc754ed)
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/23-Verical-slider
+---
+
+### 24. Toast Notification
+**Description:** A dynamic toast notification system. 🔔
+
+Random Messages: Displays a random success, warning, or error message.
+Auto-Dismiss: Notifications disappear after 2 seconds.
+Color-Coded Alerts: Green for success, red for errors, and orange for warnings.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-15-18](https://github.com/user-attachments/assets/6373843d-7677-449f-b183-c0d979b235e5)
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/24-Toast-Notification
+---
+
+### 25. GitHub Profiles API
+**Description:** A web app that fetches and displays GitHub user profiles using the GitHub API. 👤🔍
+
+User Search: Enter a GitHub username to fetch profile details.
+API Integration: Uses GitHub's public API to retrieve user data.
+Displays Profile Info: Shows avatar, username, bio, repositories, followers, and following count.
+Error Handling: Displays a message if the user is not found.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-16-14](https://github.com/user-attachments/assets/3d902243-b152-4c37-a2cb-564e2070e928)
+
+
+**Live Demo:** https://arrqamafaq.github.io/50-Js-Projects/25-Github-Profiles-Api
+---
+
+### 26. Double Tap Like 
+**Description:** Double Tap Like is an interactive feature that mimics Instagram’s double-tap like animation. Users can tap twice on an image to trigger a heart effect that appears at the tap position.
+
+Double Tap Detection: Recognizes quick successive clicks as a like.
+Animated Heart Effect: A floating heart appears where the user double-taps.
+Like Counter: Displays and updates the number of likes in real time.
+Auto Removal: The heart icon disappears smoothly after 5 seconds.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-16-54](https://github.com/user-attachments/assets/ee028ab8-7827-4fce-8aab-4593726af1ff)
+
+
+**Live Demo:** https://arqamafaq.github.io/50-Js-Projects/26-Double-Tap-like
+---
+
+27. Auto Typing Effect ⌨
+**Description:** Auto Typing Effect is a dynamic text animation project that mimics a typewriter effect, cycling through different phrases.
+
+Multiple Text Variations: Rotates through an array of phrases dynamically.
+Typing Animation: Simulates a typewriter-style effect for a smooth and engaging display.
+Speed Control: Users can adjust the typing speed using an input slider.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-18-03](https://github.com/user-attachments/assets/5dadbb72-03a1-4939-8676-399a0d06ff0a)
+
+
+**Live Demo:** https://arqamafaq.github.io/50-Js-Projects/27-Auto-Typing-Effect
+---
+
+### 28. Password Generator
+**Description:** A secure password generator that allows users to customize their password with different character types.
+
+Customizable Options: Users can include uppercase, lowercase, numbers, and symbols.
+Dynamic Length Selection: Allows users to set their desired password length.
+Clipboard Copy Feature: Generated passwords can be copied with a single click.
+Ensures Security: Guarantees at least one character from each selected category.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-18-38](https://github.com/user-attachments/assets/d135c2b0-4a55-447f-873a-b3188f28dfc2)
+
+
+**Live Demo:** https://arqamafaq.github.io/50-Js-Projects/28-Password-Generator
+---
+
+29. Custom CheckBox Widget
+**Description:** A sleek and interactive checkbox toggle widget with smooth animations.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-19-06](https://github.com/user-attachments/assets/e2a270f3-5136-468b-8a96-c1ec8973fb70)
+
+**Live Demo:** https://arqamafaq.github.io/50-Js-Projects/29-Custom-CheckBox-Widget
+---
+
+### 30. Notes App - Simple & Interactive Notes Manager 📝
+**Description:** Notes App is an intuitive and lightweight note-taking application that lets you create, edit, and delete notes seamlessly while saving them locally for future access.
+
+Features:
+Create Notes – Add notes with custom headings.
+Edit Notes – Modify your notes easily with a simple toggle.
+Delete Notes – Remove notes when no longer needed.
+Local Storage – Your notes persist even after refreshing the page.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-21-37](https://github.com/user-attachments/assets/21228a82-e524-4e2e-bed2-4307e630a990)
+
+
+**Live Demo:** https://arqamafaq.github.io/50-Js-Projects/30-Notes-App
+---
+
+### 31. HoverBoard - Interactive Colorful Grid 🎨
+**Description:** HoverBoard is a dynamic and interactive grid where each cell lights up with a random color when hovered over. The effect creates a vibrant and engaging visual experience.
+
+**Features:**
+Custom Grid Size – Adjust the number of grid cells dynamically.
+Hover Effect – Cells change to random colors when hovered.
+Persistent Colors – Option to keep colors using a toggle switch.
+Smooth Performance – Uses DocumentFragment and debouncing to optimize rendering.
+
+**Screenshot:**
+<br/>
+![Screenshot from 2025-03-18 22-22-45](https://github.com/user-attachments/assets/3be56dc8-c223-45e3-8fb0-7ab9bb39bc2b)
+
+
+**Live Demo:** https://arqamafaq.github.io/50-Js-Projects/31-HoverBoard
+---
 
 ## How to Run
 1. Clone the repository.
